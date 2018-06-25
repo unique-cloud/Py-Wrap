@@ -1,0 +1,9 @@
+[submodule "tools/swig"]
+	path = tools/swig
+	url = https://github.com/swig/swig.git
+[submodule "tools/pybind11"]
+	path = tools/pybind11
+	url = https://github.com/pybind/pybind11.git
+[submodule "tools/cppimport"]
+	path = tools/cppimport
+	url = https://github.com/tbenthompson/cppimport.git
