@@ -7,3 +7,6 @@
 [submodule "tools/cppimport"]
 	path = tools/cppimport
 	url = https://github.com/tbenthompson/cppimport.git
+[submodule "examples/cmake_example"]
+	path = examples/cmake_example
+	url = https://github.com/pybind/cmake_example.git
