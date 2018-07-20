@@ -5,19 +5,17 @@ genrule(
                "example.py",
                "example_wrap.c"
            ],
-    cmd = """
-              swig -python -outcurrentdir $<
-              cp example.py $(@D)
-              cp example_wrap.c $(@D)
-    """,
+    cmd = "swig -python -outdir $(@D) -o $(@D)/example_wrap.c $<",
 )
 
 cc_binary(
     name = "_example.so",
     srcs = [
                 "example.c",
-		":example_wrap.c"	
+		":example_wrap.c",
+		"example.h"	
            ],
+    includes = ["."],
     copts = ["-I/usr/include/python2.7"],
     linkstatic = 1,
     linkshared = 1,
